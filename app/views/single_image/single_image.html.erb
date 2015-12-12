@@ -1,0 +1,15 @@
+<%= image_tag( @image , size: "400x300", alt: "slide") %> 
+</br>
+likes: <%= @likes %>
+</br>
+<table>
+
+<% counter = 1
+@comm.each do |sing_comm|%>
+<tr> <%=  counter %> <%=  ") " + sing_comm.comment %> </tr>
+<% counter+= 1 %>
+</br>
+<% end %>
+
+	
+</table>

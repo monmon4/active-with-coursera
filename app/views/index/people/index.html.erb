@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Index People</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @index_people.each do |index_person| %>
+      <tr>
+        <td><%= index_person.name %></td>
+        <td><%= index_person.age %></td>
+        <td><%= link_to 'Show', index_person %></td>
+        <td><%= link_to 'Edit', edit_index_person_path(index_person) %></td>
+        <td><%= link_to 'Destroy', index_person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Person', new_index_person_path %>

@@ -1,0 +1,2 @@
+module SingleImageHelper
+end
